@@ -15,12 +15,12 @@
 
 
 {% block content %}
-<form>
+<form action="" method="POST">
+    {% csrf_token %}
     <p>Are you sure you want to delete "{{object}}"?</p>
-    <a href="{% url 'projects' %}">
-        <button>Go Back</button>
-    </a>
-    <input type="submit" value = "Confirm">
+    <a href="{% url 'projects' %}">Go Back</a>
+
+    <input type="submit" value = "Confirm" />
 
 </form>
 
